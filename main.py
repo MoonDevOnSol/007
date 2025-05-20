@@ -24,7 +24,8 @@ TOKEN = "7650902215:AAEtbYIKJIxtiLT_VI00C6seM-QRaIglGH0"
 ADMIN_ID = 7641767864
 CONNECTIONS_FILE = "business_connections.json"
 
-bot = Bot(TOKEN, parse_mode=ParseMode.HTML)
+from aiogram.client.default import DefaultBotProperties
+bot = Bot(TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
 dp = Dispatcher()
 
 # === Utilities ===
